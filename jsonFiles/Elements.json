@@ -1,0 +1,10 @@
+{
+  "Registration" :
+       {
+         "username_name": "fld_username",
+         "password_name" : "fld_password",
+         "Email_name" : "fld_email"
+
+       }
+
+}
