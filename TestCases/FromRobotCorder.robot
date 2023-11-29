@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation     A test suite with a single test for Register
 ...               Created by hats' Robotcorder
+...               This is a chrome extension
 Library           SeleniumLibrary    timeout=10
 
 *** Variables ***

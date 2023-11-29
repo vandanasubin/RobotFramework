@@ -1,11 +1,16 @@
 *** Settings ***
+
 Library    SeleniumLibrary
-Resource    ../Resources/User_defined_01.robot
+Resource    ../Resources/User_defined_Keywords.robot
 Test Setup     Start_Browser_And_Maximize
+# test timeout    .5s - we can set it at the test suite level as well
+
 
 *** Test Cases ***
 
 Robot_Fetch_Data
+    [Tags]    Smoke    Sanity
+    [Timeout]    5s    # if the test is not executed within the given time, then test will be failed
     ${ActualUrl}=    get location
     log    ${ActualUrl}    # returns the URL
     ${pageTitle}=    get title
@@ -31,7 +36,6 @@ Robot_Fetch_Data
     log    ${Text}
     ${AllLabels}=    get list items    name:sex
     log    ${AllLabels}    # returns a list
-
     ${countofelements}=    get element count    xpath://*[@type='text']
     log    ${countofelements}
 

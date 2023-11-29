@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231124 21:53:32.194" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases">
+<suite id="s1-s1" name="BDDTestCases" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\BDDTestCases.robot">
+<test id="s1-s1-t1" name="TestCases in BDD Format" line="10">
+<kw name="Given Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:53:33.181" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231124 21:53:33.181" endtime="20231124 21:53:38.286"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:53:38.286" endtime="20231124 21:53:38.429"/>
+</kw>
+<status status="PASS" starttime="20231124 21:53:33.181" endtime="20231124 21:53:38.429"/>
+</kw>
+<kw name="Given set selenium speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231124 21:53:38.429" endtime="20231124 21:53:38.429"/>
+</kw>
+<kw name="Then select from list by value" library="SeleniumLibrary">
+<arg>name:sex</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231124 21:53:38.429" level="INFO">Selecting options from selection list 'name:sex' by value 2.</msg>
+<status status="PASS" starttime="20231124 21:53:38.429" endtime="20231124 21:53:46.723"/>
+</kw>
+<kw name="Then select from list by label" library="SeleniumLibrary">
+<arg>name:sex</arg>
+<arg>Male</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231124 21:53:46.723" level="INFO">Selecting options from selection list 'name:sex' by label Male.</msg>
+<status status="PASS" starttime="20231124 21:53:46.723" endtime="20231124 21:53:54.905"/>
+</kw>
+<status status="PASS" starttime="20231124 21:53:33.181" endtime="20231124 21:53:54.905"/>
+</test>
+<status status="PASS" starttime="20231124 21:53:32.241" endtime="20231124 21:53:54.905"/>
+</suite>
+<suite id="s1-s2" name="DataDrivenTest" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\DataDrivenTest.robot">
+<test id="s1-s2-t1" name="LoginLogout DatadrivenTest" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:53:54.928" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/campaign/landing.php'.</msg>
+<status status="PASS" starttime="20231124 21:53:54.921" endtime="20231124 21:53:59.063"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:53:59.064" endtime="20231124 21:54:00.196"/>
+</kw>
+<kw name="Read Number Of Rows" library="User_defined_Keywords">
+<var>${row}</var>
+<arg>Test</arg>
+<kw name="fetch_max_rows">
+<var>${rows}</var>
+<arg>${Sheetname}</arg>
+<msg timestamp="20231124 21:54:00.200" level="FAIL">No keyword with name 'fetch_max_rows' found.</msg>
+<status status="FAIL" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:54:00.197" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${row}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${row}+1</value>
+<iter>
+<var name="${i}"/>
+<kw name="Read Excel Data" library="User_defined_Keywords">
+<var>${Firstname}</var>
+<arg>Test</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Read Excel Data" library="User_defined_Keywords">
+<var>${Surname}</var>
+<arg>Test</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Read Excel Data" library="User_defined_Keywords">
+<var>${Mobile}</var>
+<arg>Test</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:firstname</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:lastname</arg>
+<arg>${Surname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:reg_email__</arg>
+<arg>${Mobile}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name:websubmit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</kw>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</iter>
+<status status="NOT RUN" starttime="20231124 21:54:00.200" endtime="20231124 21:54:00.200"/>
+</for>
+<status status="FAIL" starttime="20231124 21:53:54.921" endtime="20231124 21:54:00.200">No keyword with name 'fetch_max_rows' found.</status>
+</test>
+<status status="FAIL" starttime="20231124 21:53:54.905" endtime="20231124 21:54:00.200"/>
+</suite>
+<suite id="s1-s3" name="FetchData" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\FetchData.robot">
+<test id="s1-s3-t1" name="Robot_Fetch_Data" line="11">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords" type="SETUP">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:54:00.228" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 21:54:07.086" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231124 21:54:07.086" level="FAIL">Test timeout 5 seconds exceeded.</msg>
+<status status="FAIL" starttime="20231124 21:54:00.226" endtime="20231124 21:54:07.086"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:07.086" endtime="20231124 21:54:07.086"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:54:00.226" endtime="20231124 21:54:07.086"/>
+</kw>
+<tag>Sanity</tag>
+<tag>Smoke</tag>
+<timeout value="5 seconds"/>
+<status status="FAIL" starttime="20231124 21:54:00.226" endtime="20231124 21:54:07.086">Setup failed:
+Test timeout 5 seconds exceeded.</status>
+</test>
+<test id="s1-s3-t2" name="TestUsingUserdefinedKeywords" line="43">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords" type="SETUP">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:54:07.086" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231124 21:54:07.086" endtime="20231124 21:54:11.646"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:54:11.646" endtime="20231124 21:54:12.812"/>
+</kw>
+<status status="PASS" starttime="20231124 21:54:07.086" endtime="20231124 21:54:12.812"/>
+</kw>
+<kw name="Create Folder at RunTime" library="User_defined_Keywords">
+<arg>Testingworld</arg>
+<arg>Subfolder</arg>
+<kw name="Create Folder" library="Utility">
+<arg>${foldername}</arg>
+<msg timestamp="20231124 21:54:12.812" level="FAIL">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'E:\\Testingworld'</msg>
+<status status="FAIL" starttime="20231124 21:54:12.812" endtime="20231124 21:54:12.812"/>
+</kw>
+<kw name="Create Sub Folder" library="Utility">
+<arg>${subfoldername}</arg>
+<status status="NOT RUN" starttime="20231124 21:54:12.812" endtime="20231124 21:54:12.812"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Task is done successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231124 21:54:12.812" endtime="20231124 21:54:12.812"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:54:12.812" endtime="20231124 21:54:12.812"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:54:07.086" endtime="20231124 21:54:12.812">FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'E:\\Testingworld'</status>
+</test>
+<status status="FAIL" starttime="20231124 21:54:00.200" endtime="20231124 21:54:12.812"/>
+</suite>
+<suite id="s1-s4" name="Folder-02" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Folder-02">
+<suite id="s1-s4-s1" name="DialogLibrary Demo" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Folder-02\DialogLibrary_Demo.robot">
+<test id="s1-s4-s1-t1" name="TC_001:_Learn_DialogLibrary" line="8">
+<kw name="Execute Manual Step" library="Dialogs">
+<arg>Go to Server machine and clear the logs</arg>
+<doc>Pauses execution until user sets the keyword status.</doc>
+<status status="PASS" starttime="20231124 21:54:12.896" endtime="20231124 21:54:57.196"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testcase is completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:54:57.232" endtime="20231124 21:54:57.233"/>
+</kw>
+<tag>FRTags</tag>
+<status status="PASS" starttime="20231124 21:54:12.896" endtime="20231124 21:54:57.234"/>
+</test>
+<test id="s1-s4-s1-t2" name="TC_002:_Learn_DialogLibrary" line="14">
+<kw name="Pause Execution" library="Dialogs">
+<arg>Go to Server machine and clear the logs</arg>
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20231124 21:54:57.243" endtime="20231124 21:54:58.638"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testcase is completed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:54:58.666" endtime="20231124 21:54:58.667"/>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<var>${password}</var>
+<arg>Please enter your password</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<msg timestamp="20231124 21:55:02.211" level="INFO">${password} = test@123</msg>
+<status status="PASS" starttime="20231124 21:54:58.667" endtime="20231124 21:55:02.211"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${password}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:55:02.228" endtime="20231124 21:55:02.232"/>
+</kw>
+<kw name="Get Selection From User" library="Dialogs">
+<var>${selectedCity}</var>
+<arg>c1</arg>
+<arg>c2</arg>
+<arg>c3</arg>
+<arg>c4</arg>
+<doc>Pauses execution and asks user to select a value.</doc>
+<msg timestamp="20231124 21:55:05.340" level="INFO">${selectedCity} = c3</msg>
+<status status="PASS" starttime="20231124 21:55:02.232" endtime="20231124 21:55:05.347"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${selectedCity}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:55:05.357" endtime="20231124 21:55:05.362"/>
+</kw>
+<kw name="Get Selections From User" library="Dialogs">
+<var>@{all_selections}</var>
+<arg>L1</arg>
+<arg>L2</arg>
+<arg>L3</arg>
+<arg>L4</arg>
+<arg>L5</arg>
+<doc>Pauses execution and asks user to select multiple values.</doc>
+<msg timestamp="20231124 21:55:08.027" level="INFO">@{all_selections} = [ L4 | L5 ]</msg>
+<status status="PASS" starttime="20231124 21:55:05.362" endtime="20231124 21:55:08.027"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${all_selections}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:55:08.050" endtime="20231124 21:55:08.052"/>
+</kw>
+<tag>FRTags</tag>
+<status status="PASS" starttime="20231124 21:54:57.241" endtime="20231124 21:55:08.057"/>
+</test>
+<status status="PASS" starttime="20231124 21:54:12.827" endtime="20231124 21:55:08.062"/>
+</suite>
+<suite id="s1-s4-s2" name="Selenium Speed" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Folder-02\Selenium_Speed.robot">
+<test id="s1-s4-s2-t1" name="TC_01 Set &amp; get Selenium Speed and Waits" line="7">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:55:08.094" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231124 21:55:08.094" endtime="20231124 21:55:14.464"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:55:14.464" endtime="20231124 21:55:15.602"/>
+</kw>
+<status status="PASS" starttime="20231124 21:55:08.094" endtime="20231124 21:55:15.602"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231124 21:55:15.602" endtime="20231124 21:55:15.602"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_username</arg>
+<arg>vandtest</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:15.602" level="INFO">Typing text 'vandtest' into text field 'name:fld_username'.</msg>
+<status status="PASS" starttime="20231124 21:55:15.602" endtime="20231124 21:55:18.795"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_email</arg>
+<arg>test@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:18.795" level="INFO">Typing text 'test@gmail.com' into text field 'name:fld_email'.</msg>
+<status status="PASS" starttime="20231124 21:55:18.795" endtime="20231124 21:55:22.133"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_password</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:22.133" level="INFO">Typing text 'Test@123' into text field 'name:fld_password'.</msg>
+<status status="PASS" starttime="20231124 21:55:22.133" endtime="20231124 21:55:25.343"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_cpassword</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:25.343" level="INFO">Typing text 'Test@123' into text field 'name:fld_cpassword'.</msg>
+<status status="PASS" starttime="20231124 21:55:25.343" endtime="20231124 21:55:28.566"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:datepicker</arg>
+<arg>31/07/1990</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:28.566" level="INFO">Typing text '31/07/1990' into text field 'id:datepicker'.</msg>
+<status status="PASS" starttime="20231124 21:55:28.566" endtime="20231124 21:55:31.887"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:phone</arg>
+<arg>7829844597</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:31.887" level="INFO">Typing text '7829844597' into text field 'name:phone'.</msg>
+<status status="PASS" starttime="20231124 21:55:31.887" endtime="20231124 21:55:35.167"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:address</arg>
+<arg>add1, add2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:55:35.167" level="INFO">Typing text 'add1, add2' into text field 'name:address'.</msg>
+<status status="PASS" starttime="20231124 21:55:35.167" endtime="20231124 21:55:38.445"/>
+</kw>
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20231124 21:55:38.445" level="INFO">${speed} = 1 second</msg>
+<status status="PASS" starttime="20231124 21:55:38.445" endtime="20231124 21:55:38.445"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${speed}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:55:38.445" endtime="20231124 21:55:38.445"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Speed Related</tag>
+<status status="PASS" starttime="20231124 21:55:08.094" endtime="20231124 21:55:38.445"/>
+</test>
+<test id="s1-s4-s2-t2" name="TC_02 Explicit Waits_Default" line="26">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:55:38.461" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231124 21:55:38.445" endtime="20231124 21:55:44.038"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:55:44.038" endtime="20231124 21:55:45.179"/>
+</kw>
+<status status="PASS" starttime="20231124 21:55:38.445" endtime="20231124 21:55:45.179"/>
+</kw>
+<kw name="Get Selenium Timeout" library="SeleniumLibrary">
+<var>${tm}</var>
+<doc>Gets the timeout that is used by various keywords.</doc>
+<msg timestamp="20231124 21:55:45.179" level="INFO">${tm} = 5 seconds</msg>
+<status status="PASS" starttime="20231124 21:55:45.179" endtime="20231124 21:55:45.179"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tm}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:55:45.179" endtime="20231124 21:55:45.179"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Apple</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20231124 21:55:52.563" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231124 21:55:52.563" level="FAIL">Text 'Apple' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20231124 21:55:45.179" endtime="20231124 21:55:52.579"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Waits</tag>
+<status status="FAIL" starttime="20231124 21:55:38.445" endtime="20231124 21:55:52.579">Text 'Apple' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s4-s2-t3" name="TC_02 Explicit Waits_Manual Setting" line="34">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:55:52.579" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231124 21:55:52.579" endtime="20231124 21:55:56.755"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:55:56.755" endtime="20231124 21:55:57.876"/>
+</kw>
+<status status="PASS" starttime="20231124 21:55:52.579" endtime="20231124 21:55:57.876"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>20 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20231124 21:55:57.876" endtime="20231124 21:56:04.908"/>
+</kw>
+<kw name="Get Selenium Timeout" library="SeleniumLibrary">
+<var>${tm}</var>
+<doc>Gets the timeout that is used by various keywords.</doc>
+<msg timestamp="20231124 21:56:04.908" level="INFO">${tm} = 20 seconds</msg>
+<status status="PASS" starttime="20231124 21:56:04.908" endtime="20231124 21:56:04.908"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${tm}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:56:04.908" endtime="20231124 21:56:04.908"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Apple</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20231124 21:56:26.929" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231124 21:56:26.929" level="FAIL">Text 'Apple' did not appear in 20 seconds.</msg>
+<status status="FAIL" starttime="20231124 21:56:04.908" endtime="20231124 21:56:26.929"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Waits</tag>
+<status status="FAIL" starttime="20231124 21:55:52.579" endtime="20231124 21:56:26.929">Text 'Apple' did not appear in 20 seconds.</status>
+</test>
+<test id="s1-s4-s2-t4" name="TC_Set_ImplicitWaits" line="43">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:56:26.929" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231124 21:56:26.929" endtime="20231124 21:56:32.836"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:56:32.836" endtime="20231124 21:56:33.991"/>
+</kw>
+<status status="PASS" starttime="20231124 21:56:26.929" endtime="20231124 21:56:33.991"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://facebook.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231124 21:56:33.991" level="INFO">Opening url 'https://facebook.com'</msg>
+<status status="PASS" starttime="20231124 21:56:33.991" endtime="20231124 21:56:39.446"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url1}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231124 21:56:40.454" level="INFO">${url1} = https://www.facebook.com/</msg>
+<status status="PASS" starttime="20231124 21:56:39.446" endtime="20231124 21:56:40.454"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:56:40.454" endtime="20231124 21:56:40.454"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20231124 21:56:40.454" endtime="20231124 21:56:41.943"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url1}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231124 21:56:42.962" level="INFO">${url1} = https://www.thetestingworld.com/testings/</msg>
+<status status="PASS" starttime="20231124 21:56:41.943" endtime="20231124 21:56:42.962"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:56:42.962" endtime="20231124 21:56:42.962"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 21:56:42.969" endtime="20231124 21:56:43.988"/>
+</kw>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${default_T}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20231124 21:56:43.988" level="INFO">${default_T} = 0 seconds</msg>
+<status status="PASS" starttime="20231124 21:56:43.988" endtime="20231124 21:56:43.988"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${default_T}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:56:43.988" endtime="20231124 21:56:43.988"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231124 21:56:43.988" endtime="20231124 21:56:52.020"/>
+</kw>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${default_T}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20231124 21:56:52.020" level="INFO">${default_T} = 20 seconds</msg>
+<status status="PASS" starttime="20231124 21:56:52.020" endtime="20231124 21:56:52.020"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${default_T}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231124 21:56:52.020" endtime="20231124 21:56:52.020"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_username</arg>
+<arg>vandtest</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:56:52.020" level="INFO">Typing text 'vandtest' into text field 'name:fld_username'.</msg>
+<status status="PASS" starttime="20231124 21:56:52.020" endtime="20231124 21:56:55.260"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>./Screenshots/TC_ImplicitWait.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231124 21:56:56.600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/TC_ImplicitWait.png"&gt;&lt;img src="Screenshots/TC_ImplicitWait.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231124 21:56:55.260" endtime="20231124 21:56:56.600"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.facebook.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:56:56.600" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com'.</msg>
+<status status="PASS" starttime="20231124 21:56:56.600" endtime="20231124 21:57:02.782"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 21:57:12.786" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231124 21:57:02.783" endtime="20231124 21:57:12.786"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231124 21:57:12.786" level="INFO">Executing JavaScript:
+window.scrollTo(0,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20231124 21:57:12.786" endtime="20231124 21:57:13.856"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 21:57:23.873" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231124 21:57:13.856" endtime="20231124 21:57:23.873"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20231124 21:57:41.077" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195527AC80&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/492a327e8fa7551cad5ec8a9c9061f00</msg>
+<msg timestamp="20231124 21:57:45.121" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510FD90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/492a327e8fa7551cad5ec8a9c9061f00</msg>
+<msg timestamp="20231124 21:57:49.148" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510F6D0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/492a327e8fa7551cad5ec8a9c9061f00</msg>
+<msg timestamp="20231124 21:58:01.253" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000021953E8BDF0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7a082c05a5512dc79ca5c56350fcd3cb</msg>
+<msg timestamp="20231124 21:58:05.281" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510EB00&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7a082c05a5512dc79ca5c56350fcd3cb</msg>
+<msg timestamp="20231124 21:58:09.310" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510F610&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7a082c05a5512dc79ca5c56350fcd3cb</msg>
+<msg timestamp="20231124 21:58:21.403" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510CD30&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7477ff37cb214f8264d174c7e196bce0</msg>
+<msg timestamp="20231124 21:58:25.432" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EFDC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7477ff37cb214f8264d174c7e196bce0</msg>
+<msg timestamp="20231124 21:58:29.461" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EF7C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7477ff37cb214f8264d174c7e196bce0</msg>
+<msg timestamp="20231124 21:58:41.586" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EF670&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fa7608457a86bc2b7452811ae3a6b6cd</msg>
+<msg timestamp="20231124 21:58:45.620" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551D3CA0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fa7608457a86bc2b7452811ae3a6b6cd</msg>
+<msg timestamp="20231124 21:58:49.644" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551D24D0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fa7608457a86bc2b7452811ae3a6b6cd</msg>
+<msg timestamp="20231124 21:59:01.792" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000021955279F30&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/673b34ccef6e8eb1c90086b66d339b00</msg>
+<msg timestamp="20231124 21:59:05.819" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EFC70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/673b34ccef6e8eb1c90086b66d339b00</msg>
+<msg timestamp="20231124 21:59:09.847" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000021953E8BAC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/673b34ccef6e8eb1c90086b66d339b00</msg>
+<status status="PASS" starttime="20231124 21:57:23.873" endtime="20231124 21:59:17.922"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Waits</tag>
+<status status="PASS" starttime="20231124 21:56:26.929" endtime="20231124 21:59:17.922"/>
+</test>
+<test id="s1-s4-s2-t5" name="TC_002: Context Click and Selection" line="70">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:59:17.922" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 21:59:20.462" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 21:59:20.462" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 21:59:17.922" endtime="20231124 21:59:20.482"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:20.483" endtime="20231124 21:59:20.483"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:59:17.922" endtime="20231124 21:59:20.484"/>
+</kw>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'VIDEOS')]</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:20.484" endtime="20231124 21:59:20.485"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Quick Demo')]</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:20.485" endtime="20231124 21:59:20.486"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'VIDEOS')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:20.486" endtime="20231124 21:59:20.486"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Mouse Moves</tag>
+<status status="FAIL" starttime="20231124 21:59:17.922" endtime="20231124 21:59:20.487">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<test id="s1-s4-s2-t6" name="TC_003_KEYBOARD_OPERATIONS" line="79">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.automationtesting.in/SignIn.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:59:20.490" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/SignIn.html'.</msg>
+<msg timestamp="20231124 21:59:23.024" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 21:59:23.024" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 21:59:20.490" endtime="20231124 21:59:23.024"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:23.024" endtime="20231124 21:59:23.024"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:23.024" endtime="20231124 21:59:23.024"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>xpath://input[@placeholder='E mail']</arg>
+<arg>vandanagnair09@gmail.com</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:23.024" endtime="20231124 21:59:23.024"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>\\13</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20231124 21:59:23.024" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="NOT RUN" starttime="20231124 21:59:23.024" endtime="20231124 21:59:23.024"/>
+</kw>
+<tag>FRTags</tag>
+<tag>KeyboardActions</tag>
+<status status="FAIL" starttime="20231124 21:59:20.488" endtime="20231124 21:59:23.024">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<status status="FAIL" starttime="20231124 21:55:08.065" endtime="20231124 21:59:23.024"/>
+</suite>
+<suite id="s1-s4-s3" name="Testcase with keywords and Args" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Folder-02\Testcase_with_keywords and Args.robot">
+<test id="s1-s4-s3-t1" name="TC005_With Keywords Implementation" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:59:31.211" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 21:59:33.815" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 21:59:33.845" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 21:59:31.211" endtime="20231124 21:59:33.875"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:33.882" endtime="20231124 21:59:33.882"/>
+</kw>
+<kw name="Enter the Credentials">
+<arg>vandananair@gmail.com</arg>
+<arg>Pass@123</arg>
+<status status="NOT RUN" starttime="20231124 21:59:33.883" endtime="20231124 21:59:33.883"/>
+</kw>
+<tag>FRTags</tag>
+<status status="FAIL" starttime="20231124 21:59:23.055" endtime="20231124 21:59:33.884">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<status status="FAIL" starttime="20231124 21:59:23.039" endtime="20231124 21:59:33.887"/>
+</suite>
+<status status="FAIL" starttime="20231124 21:54:12.812" endtime="20231124 21:59:33.896"/>
+</suite>
+<suite id="s1-s5" name="FromRobotCorder" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\FromRobotCorder.robot">
+<test id="s1-s5-t1" name="Register test" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demo.automationtesting.in/Register.html</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 21:59:40.333" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<msg timestamp="20231124 21:59:42.909" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 21:59:42.909" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 21:59:40.332" endtime="20231124 21:59:42.911"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="form-control ng-untouched ng-dirty ng-valid-parse ng-valid ng-valid-required"]</arg>
+<arg>vandana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.911" endtime="20231124 21:59:42.911"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="form-control ng-untouched ng-dirty ng-valid-parse ng-valid ng-valid-required"]</arg>
+<arg>nair</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.912" endtime="20231124 21:59:42.912"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//textarea[@class="form-control ng-untouched ng-valid ng-dirty ng-valid-parse"]</arg>
+<arg>Someshwara Nagar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.912" endtime="20231124 21:59:42.912"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:59:40.330" endtime="20231124 21:59:42.913">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<test id="s1-s5-t2" name="Shirdi Sai Nivas" line="16">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="form-control ng-untouched ng-valid-email ng-dirty ng-valid ng-valid-required"]</arg>
+<arg>vandanagnair09@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 21:59:42.922" level="INFO">Typing text 'vandanagnair09@gmail.com' into text field '//input[@class="form-control ng-untouched ng-valid-email ng-dirty ng-valid ng-valid-required"]'.</msg>
+<msg timestamp="20231124 21:59:42.923" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 21:59:42.924" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231124 21:59:42.920" endtime="20231124 21:59:42.932"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//select[@id="country"]</arg>
+<arg>India</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.934" endtime="20231124 21:59:42.934"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="form-control ng-untouched ng-invalid ng-dirty ng-valid-parse ng-valid-required ng-invalid-pattern"]</arg>
+<arg>12324234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.934" endtime="20231124 21:59:42.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//input[@name="radiooptions"])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.935" endtime="20231124 21:59:42.935"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//select[@id="Skills"]</arg>
+<arg>Configuration</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.936" endtime="20231124 21:59:42.936"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//select[@id="yearbox"]</arg>
+<arg>1931</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.937" endtime="20231124 21:59:42.937"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath=(//select[@class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required"])[2]</arg>
+<arg>April</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.937" endtime="20231124 21:59:42.937"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>//select[@id="daybox"]</arg>
+<arg>15</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.938" endtime="20231124 21:59:42.939"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//html</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.939" endtime="20231124 21:59:42.939"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//div[@class="form-group"])[13]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.940" endtime="20231124 21:59:42.940"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@name="signup"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.941" endtime="20231124 21:59:42.941"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20231124 21:59:42.941" endtime="20231124 21:59:42.941"/>
+</kw>
+<status status="FAIL" starttime="20231124 21:59:42.918" endtime="20231124 21:59:42.942">No browser is open.</status>
+</test>
+<doc>A test suite with a single test for Register
+Created by hats' Robotcorder</doc>
+<status status="FAIL" starttime="20231124 21:59:34.581" endtime="20231124 21:59:42.943"/>
+</suite>
+<suite id="s1-s6" name="Lists ForLoop Variables" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Lists_ForLoop_Variables.robot">
+<test id="s1-s6-t1" name="TC_001:- VariableTest" line="12">
+<kw name="Set Variable" library="BuiltIn">
+<var>${Var1}</var>
+<arg>HelloWorld</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231124 22:00:03.280" level="INFO">${Var1} = HelloWorld</msg>
+<status status="PASS" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Var1}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231124 22:00:03.280" level="FAIL">OSError: [WinError 233] No process is on the other end of the pipe</msg>
+<status status="FAIL" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280">OSError: [WinError 233] No process is on the other end of the pipe</status>
+</test>
+<test id="s1-s6-t2" name="TC_002: - List Implementation" line="16">
+<kw name="Create List" library="BuiltIn">
+<var>@{List1}</var>
+<arg>Hello</arg>
+<arg>22</arg>
+<arg>22.3</arg>
+<arg>abcd1234</arg>
+<arg>World</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231124 22:00:03.280" level="INFO">@{List1} = [ Hello | 22 | 22.3 | abcd1234 | World ]</msg>
+<status status="PASS" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${List_len}</var>
+<arg>${List1}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20231124 22:00:03.280" level="INFO">Length is 5</msg>
+<msg timestamp="20231124 22:00:03.280" level="INFO">${List_len} = 5</msg>
+<status status="PASS" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${List_len}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231124 22:00:03.280" level="FAIL">OSError: [WinError 233] No process is on the other end of the pipe</msg>
+<status status="FAIL" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${list_data}</var>
+<arg>${List1}</arg>
+<arg>3</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${list_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.280" endtime="20231124 22:00:03.280">OSError: [WinError 233] No process is on the other end of the pipe</status>
+</test>
+<test id="s1-s6-t3" name="TC_003: - For_Range_Test" line="25">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>10</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231124 22:00:03.295" level="FAIL">OSError: [WinError 233] No process is on the other end of the pipe</msg>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</iter>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</for>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295">OSError: [WinError 233] No process is on the other end of the pipe</status>
+</test>
+<test id="s1-s6-t4" name="TC004: - List_With_Loop_Test" line="30">
+<kw name="Create List" library="BuiltIn">
+<var>@{List1}</var>
+<arg>Hello</arg>
+<arg>22</arg>
+<arg>22.3</arg>
+<arg>World</arg>
+<arg>World1234</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231124 22:00:03.295" level="INFO">@{List1} = [ Hello | 22 | 22.3 | World | World1234 ]</msg>
+<status status="PASS" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{List1}</value>
+<iter>
+<var name="${i}">Hello</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231124 22:00:03.295" level="FAIL">OSError: [WinError 233] No process is on the other end of the pipe</msg>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</iter>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</for>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295">OSError: [WinError 233] No process is on the other end of the pipe</status>
+</test>
+<test id="s1-s6-t5" name="TC005: - Run &amp; Run_If Test" line="37">
+<kw name="Set Variable" library="BuiltIn">
+<var>${Key_Var}</var>
+<arg>log to console</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231124 22:00:03.295" level="INFO">${Key_Var} = log to console</msg>
+<status status="PASS" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${Key_Var}</arg>
+<arg>Testing RunKeywordOption</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Testing RunKeywordOption</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231124 22:00:03.295" level="FAIL">OSError: [WinError 233] No process is on the other end of the pipe</msg>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${var}</var>
+<arg>YES</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${var}'=='YES'</arg>
+<arg>log to console</arg>
+<arg>Value Found</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${var}'=='NO'</arg>
+<arg>log to console</arg>
+<arg>Value not found</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:03.295">OSError: [WinError 233] No process is on the other end of the pipe</status>
+</test>
+<doc>This suite has test cases for List and Loop implementation</doc>
+<status status="FAIL" starttime="20231124 21:59:42.945" endtime="20231124 22:00:03.295"/>
+</suite>
+<suite id="s1-s7" name="MultiWindowActions" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\MultiWindowActions.robot">
+<test id="s1-s7-t1" name="TC_001_Switch_Btwn_Browsers" line="16">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:03.311" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 22:00:05.857" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:05.857" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:03.311" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.311" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url2}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Switch Browser" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_username</arg>
+<arg>vandana@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Switch Browser" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Switches between active browsers using ``index_or_alias``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:[title='Search']</arg>
+<arg>latest films</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.857" endtime="20231124 22:00:05.857"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:05.872" endtime="20231124 22:00:05.872"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:03.311" endtime="20231124 22:00:05.872">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<test id="s1-s7-t2" name="TC_002_Switch_Btwn_Multiple_Tabs_in_browser" line="33">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://robotframework.org/</arg>
+<arg>${env}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:05.872" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<msg timestamp="20231124 22:00:08.382" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:08.382" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:05.872" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Mouse Down On Link" library="SeleniumLibrary">
+<arg>xpath://a[text()='robocon.io']</arg>
+<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[text()='robocon.io']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Robot Framework</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>robot-framework</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:08.382" endtime="20231124 22:00:08.382"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:05.872" endtime="20231124 22:00:08.382">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<test id="s1-s7-t3" name="TC_002_Window_Handles_Test" line="50">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://robotframework.org/</arg>
+<arg>${env}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:16.442" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<msg timestamp="20231124 22:00:18.983" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:18.983" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:08.398" endtime="20231124 22:00:18.983"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.983" endtime="20231124 22:00:18.983"/>
+</kw>
+<kw name="Mouse Down On Link" library="SeleniumLibrary">
+<arg>xpath://a[text()='robocon.io']</arg>
+<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.983" endtime="20231124 22:00:18.983"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.983" endtime="20231124 22:00:18.983"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>//a[text()='robocon.io']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>@{handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</kw>
+<for flavor="IN">
+<var>${handle}</var>
+<value>@{handles}</value>
+<iter>
+<var name="${handle}"/>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handle}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</kw>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</iter>
+<status status="NOT RUN" starttime="20231124 22:00:18.989" endtime="20231124 22:00:18.989"/>
+</for>
+<status status="FAIL" starttime="20231124 22:00:08.398" endtime="20231124 22:00:18.989">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<status status="FAIL" starttime="20231124 22:00:03.295" endtime="20231124 22:00:18.989"/>
+</suite>
+<suite id="s1-s8" name="TC02 Start Close Browser" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\TC02_Start_Close_Browser.robot">
+<test id="s1-s8-t1" name="TC003_User Registration Test" line="14">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:19.005" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<msg timestamp="20231124 22:00:21.529" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:21.529" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:19.005" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>CSS:[placeholder='First Name']</arg>
+<arg>Vandana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>CSS:[placeholder='Last Name']</arg>
+<arg>Nair</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>CSS:[placeholder='First Name']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>radiooptions</arg>
+<arg>FeMale</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>css:[value='Cricket']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Mouse Down On Link" library="SeleniumLibrary">
+<arg>xpath://*[@ class='link google-plus']</arg>
+<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://*[@ class='link google-plus']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:21.529" endtime="20231124 22:00:21.529"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:19.005" endtime="20231124 22:00:21.529">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<status status="FAIL" starttime="20231124 22:00:18.989" endtime="20231124 22:00:21.529"/>
+</suite>
+<suite id="s1-s9" name="UdemyTestcases" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\UdemyTestcases.robot">
+<test id="s1-s9-t1" name="Scenarios List and Dropdowns" line="19">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:25.609" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 22:00:28.135" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:28.135" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:25.600" endtime="20231124 22:00:28.135"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:28.135" endtime="20231124 22:00:28.135"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:28.135" endtime="20231124 22:00:28.135"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>name:sex</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:28.135" endtime="20231124 22:00:28.135"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name:sex</arg>
+<arg>Male</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:28.135" endtime="20231124 22:00:28.135"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Regression</tag>
+<tag>Testing</tag>
+<timeout value="5 minutes 20 seconds"/>
+<status status="FAIL" starttime="20231124 22:00:25.600" endtime="20231124 22:00:28.135">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<status status="FAIL" starttime="20231124 22:00:21.545" endtime="20231124 22:00:28.135"/>
+</suite>
+<suite id="s1-s10" name="Using SetUp TearDown" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Using_SetUp_TearDown.robot">
+<kw name="Before Each Test suite" library="User_defined_Keywords" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>Before each Test Suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231124 22:00:32.197" level="INFO">Before each Test Suite</msg>
+<status status="PASS" starttime="20231124 22:00:28.166" endtime="20231124 22:00:32.197"/>
+</kw>
+<status status="PASS" starttime="20231124 22:00:28.166" endtime="20231124 22:00:32.197"/>
+</kw>
+<test id="s1-s10-t1" name="Enter RegistrationForm Using JsonFile" line="23">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords" type="SETUP">
+<doc>user defined keywords with no arguments.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:32.197" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 22:00:34.721" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:34.721" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:32.197" endtime="20231124 22:00:34.721"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.721"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:32.197" endtime="20231124 22:00:34.721"/>
+</kw>
+<kw name="Close Browser Window" library="User_defined_Keywords" type="TEARDOWN">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231124 22:00:34.721" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:34.721" level="INFO">${title} = None</msg>
+<msg timestamp="20231124 22:00:34.721" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.721"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20231124 22:00:34.721" level="FAIL">OSError: [WinError 233] No process is on the other end of the pipe</msg>
+<status status="FAIL" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.721"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.721"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.721">Several failures occurred:
+
+1) No browser is open.
+
+2) OSError: [WinError 233] No process is on the other end of the pipe</status>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:32.197" endtime="20231124 22:00:34.721">Setup failed:
+WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) OSError: [WinError 233] No process is on the other end of the pipe</status>
+</test>
+<kw name="After Each Test Suite" library="User_defined_Keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>After Each Test Suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231124 22:00:34.737" level="INFO">After Each Test Suite</msg>
+<status status="PASS" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.737"/>
+</kw>
+<status status="PASS" starttime="20231124 22:00:34.721" endtime="20231124 22:00:34.737"/>
+</kw>
+<doc>This file has te testcases which allows user to get the data from json file and input those data to the form,
+which needs to be filled in the website
+We have created user defined .py methods and created keywords using the python functions and used in the file</doc>
+<status status="FAIL" starttime="20231124 22:00:28.135" endtime="20231124 22:00:34.737"/>
+</suite>
+<suite id="s1-s11" name="Validations" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\Validations.robot">
+<kw name="Before Each Test suite" library="User_defined_Keywords" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>Before each Test Suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231124 22:00:38.789" level="INFO">Before each Test Suite</msg>
+<status status="PASS" starttime="20231124 22:00:38.789" endtime="20231124 22:00:38.789"/>
+</kw>
+<status status="PASS" starttime="20231124 22:00:38.773" endtime="20231124 22:00:38.789"/>
+</kw>
+<test id="s1-s11-t1" name="TC_001_ValidationTest" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${var1}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:38.789" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/'.</msg>
+<msg timestamp="20231124 22:00:41.314" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:41.314" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:38.789" endtime="20231124 22:00:41.314"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:41.314" endtime="20231124 22:00:41.314"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>VIDEOS1</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:41.314" endtime="20231124 22:00:41.314"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[text()='VIDEOS ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:41.314" endtime="20231124 22:00:41.314"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:41.314" endtime="20231124 22:00:41.314"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:38.789" endtime="20231124 22:00:41.314">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<test id="s1-s11-t2" name="TC_002_Checkbox_Validation" line="23">
+<kw name="Initial Browser SetUp WithArgs" library="User_defined_Keywords">
+<var>${title}</var>
+<arg>chrome</arg>
+<arg>https://www.thetestingworld.com/testings/</arg>
+<doc>User defined Keywords  with return values and arguments</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Userurl}</arg>
+<arg>${UserEnv}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 22:00:41.329" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<msg timestamp="20231124 22:00:43.854" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231124 22:00:43.854" level="FAIL">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</msg>
+<status status="FAIL" starttime="20231124 22:00:41.314" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${Title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<status status="FAIL" starttime="20231124 22:00:41.314" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_username</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>name:terms</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>name:terms</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:terms</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>name:terms</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://div[@id='tab-content1']/p</arg>
+<arg>Register now and kick start your career as a Software Testing Pro!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://div[@id='tab-content1']/p</arg>
+<arg>Register now</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20231124 22:00:43.854" endtime="20231124 22:00:43.854"/>
+</kw>
+<doc>This testcase defines the checkbox checking and unchecking with user defined keywords
+Second line of documentation</doc>
+<tag>Checkboxes</tag>
+<timeout value="5 minutes"/>
+<status status="FAIL" starttime="20231124 22:00:41.314" endtime="20231124 22:00:43.854">WebDriverException: Message: Service C:\Users\hp\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.EXE unexpectedly exited. Status code was: 3221225794
+</status>
+</test>
+<kw name="After Each Test Suite" library="User_defined_Keywords" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>After Each Test Suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231124 22:00:43.869" level="INFO">After Each Test Suite</msg>
+<status status="PASS" starttime="20231124 22:00:43.869" endtime="20231124 22:00:43.869"/>
+</kw>
+<status status="PASS" starttime="20231124 22:00:43.869" endtime="20231124 22:00:43.869"/>
+</kw>
+<doc>This file contains test cases for validating the checkboxes</doc>
+<status status="FAIL" starttime="20231124 22:00:34.737" endtime="20231124 22:00:43.869"/>
+</suite>
+<status status="FAIL" starttime="20231124 21:53:32.194" endtime="20231124 22:00:43.876"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="23" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Checkboxes</stat>
+<stat pass="4" fail="6" skip="0">FRTags</stat>
+<stat pass="0" fail="1" skip="0">KeyboardActions</stat>
+<stat pass="0" fail="1" skip="0">Mouse Moves</stat>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+<stat pass="0" fail="1" skip="0">Sanity</stat>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">Speed Related</stat>
+<stat pass="0" fail="1" skip="0">Testing</stat>
+<stat pass="1" fail="2" skip="0">Waits</stat>
+</tag>
+<suite>
+<stat pass="5" fail="23" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="BDDTestCases">TestCases.BDDTestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="DataDrivenTest">TestCases.DataDrivenTest</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s3" name="FetchData">TestCases.FetchData</stat>
+<stat pass="4" fail="5" skip="0" id="s1-s4" name="Folder-02">TestCases.Folder-02</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s4-s1" name="DialogLibrary Demo">TestCases.Folder-02.DialogLibrary Demo</stat>
+<stat pass="2" fail="4" skip="0" id="s1-s4-s2" name="Selenium Speed">TestCases.Folder-02.Selenium Speed</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s4-s3" name="Testcase with keywords and Args">TestCases.Folder-02.Testcase with keywords and Args</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s5" name="FromRobotCorder">TestCases.FromRobotCorder</stat>
+<stat pass="0" fail="5" skip="0" id="s1-s6" name="Lists ForLoop Variables">TestCases.Lists ForLoop Variables</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s7" name="MultiWindowActions">TestCases.MultiWindowActions</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s8" name="TC02 Start Close Browser">TestCases.TC02 Start Close Browser</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s9" name="UdemyTestcases">TestCases.UdemyTestcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s10" name="Using SetUp TearDown">TestCases.Using SetUp TearDown</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s11" name="Validations">TestCases.Validations</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231124 21:53:32.178" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\TestCases\Using_SetUp_TearDown.robot' on line 12: Setting 'Test Setup' is allowed only once. Only the first value is used.</msg>
+<msg timestamp="20231124 21:53:32.178" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\TestCases\Using_SetUp_TearDown.robot' on line 13: Setting 'Test Teardown' is allowed only once. Only the first value is used.</msg>
+<msg timestamp="20231124 21:53:33.174" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+<msg timestamp="20231124 21:53:54.905" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+<msg timestamp="20231124 21:54:00.222" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+<msg timestamp="20231124 21:55:08.094" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+<msg timestamp="20231124 21:57:41.077" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195527AC80&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/492a327e8fa7551cad5ec8a9c9061f00</msg>
+<msg timestamp="20231124 21:57:45.121" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510FD90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/492a327e8fa7551cad5ec8a9c9061f00</msg>
+<msg timestamp="20231124 21:57:49.148" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510F6D0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/492a327e8fa7551cad5ec8a9c9061f00</msg>
+<msg timestamp="20231124 21:58:01.253" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000021953E8BDF0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7a082c05a5512dc79ca5c56350fcd3cb</msg>
+<msg timestamp="20231124 21:58:05.281" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510EB00&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7a082c05a5512dc79ca5c56350fcd3cb</msg>
+<msg timestamp="20231124 21:58:09.310" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510F610&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7a082c05a5512dc79ca5c56350fcd3cb</msg>
+<msg timestamp="20231124 21:58:21.403" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002195510CD30&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7477ff37cb214f8264d174c7e196bce0</msg>
+<msg timestamp="20231124 21:58:25.432" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EFDC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7477ff37cb214f8264d174c7e196bce0</msg>
+<msg timestamp="20231124 21:58:29.461" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EF7C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7477ff37cb214f8264d174c7e196bce0</msg>
+<msg timestamp="20231124 21:58:41.586" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EF670&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fa7608457a86bc2b7452811ae3a6b6cd</msg>
+<msg timestamp="20231124 21:58:45.620" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551D3CA0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fa7608457a86bc2b7452811ae3a6b6cd</msg>
+<msg timestamp="20231124 21:58:49.644" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551D24D0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fa7608457a86bc2b7452811ae3a6b6cd</msg>
+<msg timestamp="20231124 21:59:01.792" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000021955279F30&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/673b34ccef6e8eb1c90086b66d339b00</msg>
+<msg timestamp="20231124 21:59:05.819" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000219551EFC70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/673b34ccef6e8eb1c90086b66d339b00</msg>
+<msg timestamp="20231124 21:59:09.847" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000021953E8BAC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/673b34ccef6e8eb1c90086b66d339b00</msg>
+<msg timestamp="20231124 21:59:23.024" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20231124 22:00:03.311" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+<msg timestamp="20231124 22:00:28.166" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+<msg timestamp="20231124 22:00:38.773" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\Resources\User_defined_Keywords.robot' on line 4: Importing library 'E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Datadriven_TestData.xlsx'
+Traceback (most recent call last):
+  File "E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords\DataDrivenMethods.py", line 2, in &lt;module&gt;
+    Workbook = openpyxl.load_workbook("../Resources/Datadriven_TestData.xlsx")
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+  File "e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1249, in __init__
+    self.fp = io.open(file, filemode)
+PYTHONPATH:
+  E:\InterviewPreparations\Python\RobotAutomation\ExternalKeywords
+  E:\InterviewPreparations\Python\RobotAutomation\venv\Scripts\robot.exe
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\hp\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\hp\AppData\Local\Programs\Python\Python310
+  e:\interviewpreparations\python\robotautomation\venv
+  e:\interviewpreparations\python\robotautomation\venv\lib\site-packages</msg>
+</errors>
+</robot>

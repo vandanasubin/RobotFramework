@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
-Resource    ../Resources/User_defined_01.robot
+Resource    ../Resources/User_defined_Keywords.robot
 
 *** Variables ***
 ${url1}    https://www.thetestingworld.com/testings/

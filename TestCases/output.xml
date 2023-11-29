@@ -1,530 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231108 09:01:53.255" rpa="false" schemaversion="4">
-<suite id="s1" name="DatadrivenTest" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\DatadrivenTest.robot">
-<test id="s1-t1" name="LoginLogout DatadrivenTest" line="11">
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231125 15:16:27.861" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases">
+<suite id="s1-s1" name="FetchData" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\FetchData.robot">
+<test id="s1-s1-t1" name="Robot_Fetch_Data" line="11">
+<kw name="Start_Browser_And_Maximize" library="User_defined_Keywords" type="SETUP">
+<doc>user defined keywords with no arguments.</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
-<arg>chrome</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231108 09:01:53.849" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/campaign/landing.php'.</msg>
-<status status="PASS" starttime="20231108 09:01:53.849" endtime="20231108 09:01:58.908"/>
+<msg timestamp="20231125 15:16:28.541" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231125 15:16:28.541" endtime="20231125 15:16:32.759"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231108 09:01:58.910" endtime="20231108 09:01:59.059"/>
+<status status="PASS" starttime="20231125 15:16:32.760" endtime="20231125 15:16:32.911"/>
 </kw>
-<kw name="Read Number Of Rows" library="User_defined_Keywords">
-<var>${row}</var>
-<arg>Test</arg>
-<kw name="Fetch Max Rows" library="DataDrivenMethods">
-<var>${rows}</var>
-<arg>${Sheetname}</arg>
-<msg timestamp="20231108 09:01:59.061" level="INFO">${rows} = 6</msg>
-<status status="PASS" starttime="20231108 09:01:59.060" endtime="20231108 09:01:59.061"/>
+<status status="PASS" starttime="20231125 15:16:28.541" endtime="20231125 15:16:32.911"/>
 </kw>
-<msg timestamp="20231108 09:01:59.062" level="INFO">${row} = 6</msg>
-<status status="PASS" starttime="20231108 09:01:59.059" endtime="20231108 09:01:59.062"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${ActualUrl}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231125 15:16:32.926" level="INFO">${ActualUrl} = https://www.thetestingworld.com/testings/</msg>
+<status status="PASS" starttime="20231125 15:16:32.912" endtime="20231125 15:16:32.926"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>${row}</arg>
+<arg>${ActualUrl}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231108 09:01:59.063" level="INFO">6</msg>
-<status status="PASS" starttime="20231108 09:01:59.062" endtime="20231108 09:01:59.063"/>
+<msg timestamp="20231125 15:16:32.926" level="INFO">https://www.thetestingworld.com/testings/</msg>
+<status status="PASS" starttime="20231125 15:16:32.926" endtime="20231125 15:16:32.926"/>
 </kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>1</value>
-<value>${row}+1</value>
-<iter>
-<var name="${i}">1</var>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Firstname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:01:59.066" level="INFO">${cellData} = Firstname</msg>
-<status status="PASS" starttime="20231108 09:01:59.065" endtime="20231108 09:01:59.066"/>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${pageTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231125 15:16:32.940" level="INFO">${pageTitle} = Login &amp; Sign Up Forms</msg>
+<status status="PASS" starttime="20231125 15:16:32.926" endtime="20231125 15:16:32.940"/>
 </kw>
-<msg timestamp="20231108 09:01:59.066" level="INFO">${Firstname} = Firstname</msg>
-<status status="PASS" starttime="20231108 09:01:59.064" endtime="20231108 09:01:59.066"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${pageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 15:16:32.940" endtime="20231125 15:16:32.940"/>
 </kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Surname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:01:59.068" level="INFO">${cellData} = Surname</msg>
-<status status="PASS" starttime="20231108 09:01:59.067" endtime="20231108 09:01:59.068"/>
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${Speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20231125 15:16:32.940" level="INFO">${Speed} = 0 seconds</msg>
+<status status="PASS" starttime="20231125 15:16:32.940" endtime="20231125 15:16:32.940"/>
 </kw>
-<msg timestamp="20231108 09:01:59.069" level="INFO">${Surname} = Surname</msg>
-<status status="PASS" starttime="20231108 09:01:59.066" endtime="20231108 09:01:59.069"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Speed}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231125 15:16:32.940" endtime="20231125 15:16:32.940"/>
 </kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Mobile}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_username</arg>
+<arg>vandana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 15:16:32.960" level="INFO">Typing text 'vandana' into text field 'name:fld_username'.</msg>
+<status status="PASS" starttime="20231125 15:16:32.940" endtime="20231125 15:16:33.156"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_email</arg>
+<arg>vandana@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 15:16:33.156" level="INFO">Typing text 'vandana@gmail.com' into text field 'name:fld_email'.</msg>
+<status status="PASS" starttime="20231125 15:16:33.156" endtime="20231125 15:16:33.291"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:fld_password</arg>
+<arg>Pass@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 15:16:33.291" level="INFO">Typing text 'Pass@123' into text field 'name:fld_password'.</msg>
+<status status="PASS" starttime="20231125 15:16:33.291" endtime="20231125 15:16:33.413"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${username}</var>
+<arg>name:fld_username</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 15:16:33.450" level="INFO">${username} = vandana</msg>
+<status status="PASS" starttime="20231125 15:16:33.413" endtime="20231125 15:16:33.450"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${password}</var>
+<arg>name:fld_password</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 15:16:33.492" level="INFO">${password} = Pass@123</msg>
+<status status="PASS" starttime="20231125 15:16:33.451" endtime="20231125 15:16:33.492"/>
+</kw>
+<kw name="Concatenate two Strings" library="User_defined_Keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="String Concatination" library="Utility">
+<var>${resultval}</var>
+<arg>${String1}</arg>
+<arg>${String2}</arg>
+<msg timestamp="20231125 15:16:33.495" level="INFO">${resultval} = vandanaPass@123</msg>
+<status status="PASS" starttime="20231125 15:16:33.494" endtime="20231125 15:16:33.495"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${resultval}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231125 15:16:33.496" level="INFO">vandanaPass@123</msg>
+<status status="PASS" starttime="20231125 15:16:33.495" endtime="20231125 15:16:33.496"/>
+</kw>
+<status status="PASS" starttime="20231125 15:16:33.493" endtime="20231125 15:16:33.496"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${placeholder}</var>
+<arg>name:zip</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20231125 15:16:33.527" level="INFO">${placeholder} = Zip code</msg>
+<status status="PASS" starttime="20231125 15:16:33.497" endtime="20231125 15:16:33.527"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${placeholder}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231125 15:16:33.527" level="INFO">Zip code</msg>
+<status status="PASS" starttime="20231125 15:16:33.527" endtime="20231125 15:16:33.527"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${innertext}</var>
+<arg>xpath://a[@class='displayPopup']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231125 15:16:33.859" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231125 15:16:33.859" level="FAIL">Test timeout 5 seconds exceeded.</msg>
+<status status="FAIL" starttime="20231125 15:16:33.527" endtime="20231125 15:16:33.859"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${innertext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.860" endtime="20231125 15:16:33.860"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:country</arg>
 <arg>3</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:01:59.074" level="INFO">${cellData} = MobileNumber</msg>
-<status status="PASS" starttime="20231108 09:01:59.072" endtime="20231108 09:01:59.075"/>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.860" endtime="20231125 15:16:33.861"/>
 </kw>
-<msg timestamp="20231108 09:01:59.075" level="INFO">${Mobile} = MobileNumber</msg>
-<status status="PASS" starttime="20231108 09:01:59.070" endtime="20231108 09:01:59.075"/>
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<var>${Val}</var>
+<arg>name:country</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.861" endtime="20231125 15:16:33.861"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:firstname</arg>
-<arg>${Firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:01:59.078" level="INFO">Typing text 'Firstname' into text field 'name:firstname'.</msg>
-<status status="PASS" starttime="20231108 09:01:59.076" endtime="20231108 09:01:59.350"/>
+<kw name="Log" library="BuiltIn">
+<arg>${Val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.861" endtime="20231125 15:16:33.862"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:lastname</arg>
-<arg>${Surname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:01:59.354" level="INFO">Typing text 'Surname' into text field 'name:lastname'.</msg>
-<status status="PASS" starttime="20231108 09:01:59.350" endtime="20231108 09:01:59.566"/>
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<var>${Text}</var>
+<arg>name:sex</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.862" endtime="20231125 15:16:33.862"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:reg_email__</arg>
-<arg>${Mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:01:59.570" level="INFO">Typing text 'MobileNumber' into text field 'name:reg_email__'.</msg>
-<status status="PASS" starttime="20231108 09:01:59.567" endtime="20231108 09:01:59.755"/>
+<kw name="Log" library="BuiltIn">
+<arg>${Text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.863" endtime="20231125 15:16:33.863"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:websubmit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231108 09:01:59.755" level="INFO">Clicking button 'name:websubmit'.</msg>
-<status status="PASS" starttime="20231108 09:01:59.755" endtime="20231108 09:01:59.923"/>
+<kw name="Get List Items" library="SeleniumLibrary">
+<var>${AllLabels}</var>
+<arg>name:sex</arg>
+<doc>Returns all labels or values of selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.863" endtime="20231125 15:16:33.863"/>
 </kw>
-<status status="PASS" starttime="20231108 09:01:59.064" endtime="20231108 09:01:59.923"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Firstname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:01:59.923" level="INFO">${cellData} = Vandana01</msg>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:01:59.923"/>
+<kw name="Log" library="BuiltIn">
+<arg>${AllLabels}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.863" endtime="20231125 15:16:33.864"/>
 </kw>
-<msg timestamp="20231108 09:01:59.923" level="INFO">${Firstname} = Vandana01</msg>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:01:59.923"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${countofelements}</var>
+<arg>xpath://*[@type='text']</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.864" endtime="20231125 15:16:33.864"/>
 </kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Surname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:01:59.923" level="INFO">${cellData} = NAir01</msg>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:01:59.923"/>
+<kw name="Log" library="BuiltIn">
+<arg>${countofelements}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231125 15:16:33.865" endtime="20231125 15:16:33.865"/>
 </kw>
-<msg timestamp="20231108 09:01:59.923" level="INFO">${Surname} = NAir01</msg>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:01:59.923"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Mobile}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>3</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:01:59.923" level="INFO">${cellData} = 7829844595</msg>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:01:59.923"/>
-</kw>
-<msg timestamp="20231108 09:01:59.923" level="INFO">${Mobile} = 7829844595</msg>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:01:59.923"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:firstname</arg>
-<arg>${Firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:01:59.935" level="INFO">Typing text 'Vandana01' into text field 'name:firstname'.</msg>
-<status status="PASS" starttime="20231108 09:01:59.934" endtime="20231108 09:02:00.145"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:lastname</arg>
-<arg>${Surname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:00.149" level="INFO">Typing text 'NAir01' into text field 'name:lastname'.</msg>
-<status status="PASS" starttime="20231108 09:02:00.146" endtime="20231108 09:02:00.359"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:reg_email__</arg>
-<arg>${Mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:00.359" level="INFO">Typing text '7829844595' into text field 'name:reg_email__'.</msg>
-<status status="PASS" starttime="20231108 09:02:00.359" endtime="20231108 09:02:00.575"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:websubmit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:00.575" level="INFO">Clicking button 'name:websubmit'.</msg>
-<status status="PASS" starttime="20231108 09:02:00.575" endtime="20231108 09:02:00.712"/>
-</kw>
-<status status="PASS" starttime="20231108 09:01:59.923" endtime="20231108 09:02:00.718"/>
-</iter>
-<iter>
-<var name="${i}">3</var>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Firstname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:00.722" level="INFO">${cellData} = Vandana02</msg>
-<status status="PASS" starttime="20231108 09:02:00.721" endtime="20231108 09:02:00.723"/>
-</kw>
-<msg timestamp="20231108 09:02:00.724" level="INFO">${Firstname} = Vandana02</msg>
-<status status="PASS" starttime="20231108 09:02:00.720" endtime="20231108 09:02:00.724"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Surname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:00.727" level="INFO">${cellData} = NAir02</msg>
-<status status="PASS" starttime="20231108 09:02:00.726" endtime="20231108 09:02:00.727"/>
-</kw>
-<msg timestamp="20231108 09:02:00.728" level="INFO">${Surname} = NAir02</msg>
-<status status="PASS" starttime="20231108 09:02:00.724" endtime="20231108 09:02:00.729"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Mobile}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>3</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:00.732" level="INFO">${cellData} = 7829844596</msg>
-<status status="PASS" starttime="20231108 09:02:00.731" endtime="20231108 09:02:00.732"/>
-</kw>
-<msg timestamp="20231108 09:02:00.732" level="INFO">${Mobile} = 7829844596</msg>
-<status status="PASS" starttime="20231108 09:02:00.730" endtime="20231108 09:02:00.732"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:firstname</arg>
-<arg>${Firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:00.734" level="INFO">Typing text 'Vandana02' into text field 'name:firstname'.</msg>
-<status status="PASS" starttime="20231108 09:02:00.732" endtime="20231108 09:02:01.005"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:lastname</arg>
-<arg>${Surname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:01.005" level="INFO">Typing text 'NAir02' into text field 'name:lastname'.</msg>
-<status status="PASS" starttime="20231108 09:02:01.005" endtime="20231108 09:02:01.209"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:reg_email__</arg>
-<arg>${Mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:01.209" level="INFO">Typing text '7829844596' into text field 'name:reg_email__'.</msg>
-<status status="PASS" starttime="20231108 09:02:01.209" endtime="20231108 09:02:01.451"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:websubmit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:01.451" level="INFO">Clicking button 'name:websubmit'.</msg>
-<status status="PASS" starttime="20231108 09:02:01.451" endtime="20231108 09:02:01.621"/>
-</kw>
-<status status="PASS" starttime="20231108 09:02:00.719" endtime="20231108 09:02:01.621"/>
-</iter>
-<iter>
-<var name="${i}">4</var>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Firstname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:01.623" level="INFO">${cellData} = Vandana03</msg>
-<status status="PASS" starttime="20231108 09:02:01.623" endtime="20231108 09:02:01.624"/>
-</kw>
-<msg timestamp="20231108 09:02:01.624" level="INFO">${Firstname} = Vandana03</msg>
-<status status="PASS" starttime="20231108 09:02:01.622" endtime="20231108 09:02:01.624"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Surname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:01.625" level="INFO">${cellData} = NAir03</msg>
-<status status="PASS" starttime="20231108 09:02:01.624" endtime="20231108 09:02:01.625"/>
-</kw>
-<msg timestamp="20231108 09:02:01.625" level="INFO">${Surname} = NAir03</msg>
-<status status="PASS" starttime="20231108 09:02:01.624" endtime="20231108 09:02:01.625"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Mobile}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>3</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:01.626" level="INFO">${cellData} = 7829844597</msg>
-<status status="PASS" starttime="20231108 09:02:01.626" endtime="20231108 09:02:01.626"/>
-</kw>
-<msg timestamp="20231108 09:02:01.626" level="INFO">${Mobile} = 7829844597</msg>
-<status status="PASS" starttime="20231108 09:02:01.625" endtime="20231108 09:02:01.626"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:firstname</arg>
-<arg>${Firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:01.627" level="INFO">Typing text 'Vandana03' into text field 'name:firstname'.</msg>
-<status status="PASS" starttime="20231108 09:02:01.626" endtime="20231108 09:02:01.843"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:lastname</arg>
-<arg>${Surname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:01.845" level="INFO">Typing text 'NAir03' into text field 'name:lastname'.</msg>
-<status status="PASS" starttime="20231108 09:02:01.843" endtime="20231108 09:02:02.076"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:reg_email__</arg>
-<arg>${Mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:02.086" level="INFO">Typing text '7829844597' into text field 'name:reg_email__'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.084" endtime="20231108 09:02:02.291"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:websubmit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:02.291" level="INFO">Clicking button 'name:websubmit'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.291" endtime="20231108 09:02:02.424"/>
-</kw>
-<status status="PASS" starttime="20231108 09:02:01.622" endtime="20231108 09:02:02.424"/>
-</iter>
-<iter>
-<var name="${i}">5</var>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Firstname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:02.424" level="INFO">${cellData} = Vandana04</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.424"/>
-</kw>
-<msg timestamp="20231108 09:02:02.424" level="INFO">${Firstname} = Vandana04</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.424"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Surname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:02.424" level="INFO">${cellData} = NAir04</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.424"/>
-</kw>
-<msg timestamp="20231108 09:02:02.424" level="INFO">${Surname} = NAir04</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.424"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Mobile}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>3</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:02.424" level="INFO">${cellData} = 7829844598</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.424"/>
-</kw>
-<msg timestamp="20231108 09:02:02.424" level="INFO">${Mobile} = 7829844598</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.424"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:firstname</arg>
-<arg>${Firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:02.424" level="INFO">Typing text 'Vandana04' into text field 'name:firstname'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.589"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:lastname</arg>
-<arg>${Surname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:02.591" level="INFO">Typing text 'NAir04' into text field 'name:lastname'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.589" endtime="20231108 09:02:02.735"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:reg_email__</arg>
-<arg>${Mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:02.737" level="INFO">Typing text '7829844598' into text field 'name:reg_email__'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.736" endtime="20231108 09:02:02.888"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:websubmit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:02.888" level="INFO">Clicking button 'name:websubmit'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.888" endtime="20231108 09:02:02.992"/>
-</kw>
-<status status="PASS" starttime="20231108 09:02:02.424" endtime="20231108 09:02:02.992"/>
-</iter>
-<iter>
-<var name="${i}">6</var>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Firstname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:02.992" level="INFO">${cellData} = Vandana05</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:02.992"/>
-</kw>
-<msg timestamp="20231108 09:02:02.992" level="INFO">${Firstname} = Vandana05</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:02.992"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Surname}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:02.992" level="INFO">${cellData} = NAir05</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:02.992"/>
-</kw>
-<msg timestamp="20231108 09:02:02.992" level="INFO">${Surname} = NAir05</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:02.992"/>
-</kw>
-<kw name="Read Excel Data" library="User_defined_Keywords">
-<var>${Mobile}</var>
-<arg>Test</arg>
-<arg>${i}</arg>
-<arg>3</arg>
-<kw name="Fetch CellData" library="DataDrivenMethods">
-<var>${cellData}</var>
-<arg>${Sheetname}</arg>
-<arg>${row}</arg>
-<arg>${column}</arg>
-<msg timestamp="20231108 09:02:02.992" level="INFO">${cellData} = 7829844599</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:02.992"/>
-</kw>
-<msg timestamp="20231108 09:02:02.992" level="INFO">${Mobile} = 7829844599</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:02.992"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:firstname</arg>
-<arg>${Firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:03.001" level="INFO">Typing text 'Vandana05' into text field 'name:firstname'.</msg>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:03.152"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:lastname</arg>
-<arg>${Surname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:03.168" level="INFO">Typing text 'NAir05' into text field 'name:lastname'.</msg>
-<status status="PASS" starttime="20231108 09:02:03.152" endtime="20231108 09:02:03.321"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:reg_email__</arg>
-<arg>${Mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:03.322" level="INFO">Typing text '7829844599' into text field 'name:reg_email__'.</msg>
-<status status="PASS" starttime="20231108 09:02:03.321" endtime="20231108 09:02:03.486"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:websubmit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231108 09:02:03.488" level="INFO">Clicking button 'name:websubmit'.</msg>
-<status status="PASS" starttime="20231108 09:02:03.487" endtime="20231108 09:02:03.589"/>
-</kw>
-<status status="PASS" starttime="20231108 09:02:02.992" endtime="20231108 09:02:03.589"/>
-</iter>
-<status status="PASS" starttime="20231108 09:01:59.063" endtime="20231108 09:02:03.589"/>
-</for>
-<status status="PASS" starttime="20231108 09:01:53.849" endtime="20231108 09:02:03.590"/>
+<tag>Sanity</tag>
+<tag>Smoke</tag>
+<timeout value="5 seconds"/>
+<status status="FAIL" starttime="20231125 15:16:28.541" endtime="20231125 15:16:33.865">Test timeout 5 seconds exceeded.</status>
 </test>
-<status status="PASS" starttime="20231108 09:01:53.255" endtime="20231108 09:02:03.592"/>
+<status status="FAIL" starttime="20231125 15:16:27.892" endtime="20231125 15:16:33.867"/>
+</suite>
+<suite id="s1-s2" name="UdemyTestcases" source="E:\InterviewPreparations\Python\RobotAutomation\TestCases\UdemyTestcases.robot">
+<test id="s1-s2-t1" name="Scenarios List and Dropdowns" line="19">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 15:16:33.874" level="INFO">Opening browser 'chrome' to base url 'https://www.thetestingworld.com/testings/'.</msg>
+<status status="PASS" starttime="20231125 15:16:33.874" endtime="20231125 15:16:37.215"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231125 15:16:37.215" endtime="20231125 15:16:37.365"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231125 15:16:37.365" endtime="20231125 15:16:37.365"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>name:sex</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231125 15:16:37.376" level="INFO">Selecting options from selection list 'name:sex' by value 2.</msg>
+<status status="PASS" starttime="20231125 15:16:37.365" endtime="20231125 15:16:45.737"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name:sex</arg>
+<arg>Male</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231125 15:16:45.737" level="INFO">Selecting options from selection list 'name:sex' by label Male.</msg>
+<status status="PASS" starttime="20231125 15:16:45.737" endtime="20231125 15:16:53.931"/>
+</kw>
+<tag>FRTags</tag>
+<tag>Regression</tag>
+<tag>Testing</tag>
+<timeout value="5 minutes 20 seconds"/>
+<status status="PASS" starttime="20231125 15:16:33.874" endtime="20231125 15:16:53.931"/>
+</test>
+<status status="PASS" starttime="20231125 15:16:33.869" endtime="20231125 15:16:53.947"/>
+</suite>
+<status status="FAIL" starttime="20231125 15:16:27.861" endtime="20231125 15:16:53.947"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">FRTags</stat>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+<stat pass="0" fail="1" skip="0">Sanity</stat>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">Testing</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="DatadrivenTest">DatadrivenTest</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="FetchData">TestCases.FetchData</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="UdemyTestcases">TestCases.UdemyTestcases</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231125 15:16:27.839" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\TestCases\Using_SetUp_TearDown.robot' on line 12: Setting 'Test Setup' is allowed only once. Only the first value is used.</msg>
+<msg timestamp="20231125 15:16:27.839" level="ERROR">Error in file 'E:\InterviewPreparations\Python\RobotAutomation\TestCases\Using_SetUp_TearDown.robot' on line 13: Setting 'Test Teardown' is allowed only once. Only the first value is used.</msg>
 </errors>
 </robot>

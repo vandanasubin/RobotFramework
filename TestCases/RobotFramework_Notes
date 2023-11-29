@@ -2,20 +2,31 @@
 2. Generally Business users who might be having less technical knowledge will be able to work with this framework and can perform the acceptance test
 3. Provide automation with minimal Programming
 4. It is a keyword driven framework. We have Libraries with lots of pre-defined keywords available to achieve Selenium test/DB test/Sikuli/API etc .
-5. Built on top of Python and Java
+5. This framework is python based framework .
+* This framework is widely used for ATDD, BDD, RPA
 6. IT's Free of cost
 5. The code is in a distributed structure where the Program is distributed in to Settings, Variables, Testcases etc
 6. Here in Robot Framework,
    1. Each file is a test suite
-   2. Each folder and subfolder under testcase folder are test suites
+   2. Each folder and sub-folder under testcase folder are test suites
       Which has other test suites inside it .
       to execute all the files in the robot framework - robot <foldername>
 
 
-8. For Robot Framework Selenium automation, the webdriver .exe files must be placed in the "scripts" folder
+* variables declared inside the variables section are the global variables . it can be used across the test cases in the file
+* if we need documentation to be aligned in multiple lines, then use three dots
+* Implicit xpath strategy: - If the locator starts with // or multiple opening parenthesis in front of the //, the locator is considered to be an XPath expression.
+* Strategy:value  ->  This is the explicit location strategy
+* We have chaining locators in robot framework
+* Test Templates - We add it under settings section which mentioned the keyword which will be applied on the test case
+* "Library DataDriver" is used for data driven testing
+* openpyxl module is used to work with excel file and drive the data in to the test
+* One Pros of this framework is no need to write any code to generate the reports .Also, no need to write code to take screens for failed scenarios
 
-7. robot -i <Tagname> <Test Foldername>
-8. robot -i <Tagname> <Test file name>.robot
+
+8.  For Robot Framework Selenium automation, the webdriver .exe files must be placed in the "scripts" folder
+7.  robot -i <Tagname> <Test Foldername>
+8.  robot -i <Tagname> <Test file name>.robot
 12. robot  -i <Tag1> -i <Tag2> <Suitename>.robot - To include the testcases with tags
 13. robot -e <tag> <suitename> - To exclude the tests with tags
 14. robot -e <tag1> -e <tag2> <suitename>
@@ -23,19 +34,56 @@
 16. robot -i <Tag1>NOT<Tag2> TestSuiteFolder - Those testcases with Tag1 Present and Tag2 not present
 17. robot -i <Tag1>OR<Tag2> TestSuiteFolder - Those testcases with either Tag1 or Tag2 are present
 18. robot -s <TestSuiteName> <TestFolderName> - To execute the particular test suite file from the test folder
-19. robot -r <Report Relative f
-older path>  <SuiteToRun> - To store the reports.html in the specific folder path
-20. robot -r <Report Relative folder path> -o <output folder path/output.xml> -l <Logfolderpath/log.html>  <SuiteToRun> - To store the reports.html in the specific folder path
+21. Execute test by suite name - > robot --suite <foldername>
+22. Execute failed test ->  robot --rerunfailed output.xml
+23. To change the variable values at runtime :- robot --variable browser_name:Firefox  testDemo6.robot
+    This can be done only to the global variables
+26. robot --variable: Firefox --include SMOKE testDemo6.robot , this is how we set command line arguments
+27.
+
+
+
+19. By default, All the three reports from execution results will be saved in the location/folder from which we ran the test cases
+20. robot -r <Report Relative folder path> -o <output folder path/output.xml> -l <Logfolderpath/log.html>  <SuiteToRun> - To store the reports.html/output.xml/log.html in the specific folder path
 9. To execute a particular testcase alone -  robot -t <testcasename>  <testfilename>.robot
+In this way, we can generate files on different locations in the project folder  by giving the relative path .
+
 10. We can add 'default' tags to those testcases to which user has not added any tags .
 11. 'Force Tags' will be applied to all the testcases irrespective of whether the tags are added/not
 
-How to save the output files ??
-By default, the html execution result files will be saved in the location/folder from which we ran the test cases .
-
-
 ./Reports - Means, report folder will be created within the current folder path given
 ../Reports means reports folder will be created within the folder which is one step up .
+
+* There are decorators/annotations available in robotframework like @library, @Keyword, @not-keyword
+* we can implement page object model in robot framework to achieve clean and maintainable framework
+* We can create seperate .robot files for the specific page related user defined keywords.
+* Generic page objects/variables/env /creds details can be given in generic.robot file
+* Similarly, .py files can be created seperately for the pages. In this way we can make the framework more organized and easy to maintain
+* Parallel Test Execution in robot framework with Pabot plugin
+* To execute all the tests in a particular folder  . Open that path in terminal and hit " robot ."
+* We can use "Pabot plugin" to achieve parallel execution in RobotFramework.
+* Pabot runs the tests in parallel on a single machine with multiple processes
+by
+default, pabot executes the test suites in Parallel . Which means, the test cases within a test suite will be sequnetially executed
+Split at suite level - > pabot [testfolder path]
+Split at Test case level - > pabot --testlevelsplit [path to testsfolder/.robot suitefiles]
+Run with 8 processes - > pabot --processes 8 [path to tests]
+The processed by default used depends on the cpu cores - 2 Processes per CPU Core .
+
+
+When we integrate Sikuli with the robot framework, We need a server to run at the background
+Also we can use an application "LightShot" to take the images of the Elements .
+Sikuli always use the images of the elements to locate them on the UI
+We can use sikuli for any type of testing as it uses images to locate the element
+
+Set browser implicit wait - It will set implicit wait for all the elements in the current browser.
+If element is found within the time given, the next step will be executed. once added, it will be applicable for all the find element steps
+
+Set selenium implicit wait - this wait will be applicable for all the browsers in the current
+ test .
+
+
+
 
 
 

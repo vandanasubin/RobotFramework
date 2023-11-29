@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231117 17:53:44.187" rpa="false" schemaversion="4">
+<suite id="s1" name="EndtoEnd Scenarios" source="E:\InterviewPreparations\Python\RobotAutomation\RestAPIAutomation\EndToEnd\EndtoEnd_Scenarios.robot">
+<test id="s1-t1" name="TC_001_RequestChaining" line="13">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231117 17:53:44.610" level="INFO">&amp;{headers} = { content-type=application/json }</msg>
+<status status="PASS" starttime="20231117 17:53:44.604" endtime="20231117 17:53:44.610"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>endtoend</arg>
+<arg>${base_url}</arg>
+<arg>headers= ${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231117 17:53:44.610" level="INFO">Creating Session using : alias=endtoend, url=http://thetestingworldapi.com/, headers={'content-type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231117 17:53:44.610" endtime="20231117 17:53:44.610"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>first_name= ${Original_name}</arg>
+<arg>middle_name= Calamares</arg>
+<arg>last_name= Lumpia</arg>
+<arg>date_of_birth= 11/11/2011</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231117 17:53:44.610" level="INFO">${body} = {'first_name': ' Hellotest', 'middle_name': ' Calamares', 'last_name': ' Lumpia', 'date_of_birth': ' 11/11/2011'}</msg>
+<status status="PASS" starttime="20231117 17:53:44.610" endtime="20231117 17:53:44.610"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${postresponse}</var>
+<arg>endtoend</arg>
+<arg>/api/studentsDetails</arg>
+<arg>data=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20231117 17:53:47.584" level="INFO">POST Request : url=http://thetestingworldapi.com/api/studentsDetails (redirected) 
+ path_url=/api/studentsDetails 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Content-Length': '92'} 
+ body=first_name=+Hellotest&amp;middle_name=+Calamares&amp;last_name=+Lumpia&amp;date_of_birth=+11%2F11%2F2011 
+ </msg>
+<msg timestamp="20231117 17:53:47.584" level="INFO">GET Response : url=https://thetestingworldapi.com/api/studentsDetails 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Fri, 17 Nov 2023 12:23:46 GMT', 'Content-Length': '12556'} 
+ body=[{"id":8468399,"first_name":"Raju","middle_name":"jk","last_name":"Paul","date_of_birth":"12/03/2001"},{"id":8468398,"first_name":"Raju","middle_name":"jk","last_name":"Paul","date_of_birth":"12/03/2001"},{"id":8468397,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468396,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468395,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468394,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468393,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468392,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468391,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468390,"first_name":"Furkan","middle_name":"Anıl","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468389,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468388,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468387,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468386,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468385,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468384,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468383,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468382,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468381,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468380,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468379,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468378,"first_name":"Furkan","middle_name":"A","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468377,"first_name":"Furkan","middle_name":"Anıl","last_name":"Simsek","date_of_birth":"07/02/1996"},{"id":8468376,"first_name":"sample string 1","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468375,"first_name":"Jacob","middle_name":"","last_name":"Uludag","date_of_birth":"10/10/1990"},{"id":8468374,"first_name":"Jacob","middle_name":"","last_name":"Uludag","date_of_birth":"10/10/1990"},{"id":8468373,"first_name":"Jacob","middle_name":"","last_name":"Uludag","date_of_birth":"10/10/1990"},{"id":8468372,"first_name":"Jacob","middle_name":"","last_name":"Uludag","date_of_birth":"10/10/1990"},{"id":8468371,"first_name":"Testing","middle_name":"A","last_name":"World","date_of_birth":"12/12/1990"},{"id":8468370,"first_name":"Testing","middle_name":"A","last_name":"World","date_of_birth":"12/12/1990"},{"id":8468369,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468368,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468367,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468366,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468365,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468364,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468363,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468362,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468361,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468360,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468359,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468358,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468357,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468356,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468355,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468354,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468353,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468352,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468351,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468350,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468349,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468348,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468347,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468346,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468345,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468344,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468343,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468342,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468341,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468340,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468339,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468338,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468337,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468336,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468335,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468334,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468333,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468332,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468331,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468330,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468329,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468328,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468327,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468326,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468325,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468324,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468323,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":8468322,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20231117 17:53:47.584" level="INFO">e:\interviewpreparations\python\robotautomation\venv\lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'thetestingworldapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg timestamp="20231117 17:53:47.584" level="INFO">${postresponse} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231117 17:53:44.610" endtime="20231117 17:53:47.584"/>
+</kw>
+<kw name="Convert String To Json" library="JSONLibrary">
+<var>${jsonresponse}</var>
+<arg>${postresponse.content}</arg>
+<doc>Convert String to JSON object</doc>
+<msg timestamp="20231117 17:53:47.584" level="INFO">${jsonresponse} = [{'id': 8468399, 'first_name': 'Raju', 'middle_name': 'jk', 'last_name': 'Paul', 'date_of_birth': '12/03/2001'}, {'id': 8468398, 'first_name': 'Raju', 'middle_name': 'jk', 'last_name': 'Paul', 'date_o...</msg>
+<status status="PASS" starttime="20231117 17:53:47.584" endtime="20231117 17:53:47.584"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{id_list}</var>
+<arg>${jsonresponse}</arg>
+<arg>id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20231117 17:53:47.669" level="INFO">@{id_list} = [ ]</msg>
+<status status="PASS" starttime="20231117 17:53:47.584" endtime="20231117 17:53:47.669"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${id_list}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231117 17:53:47.669" endtime="20231117 17:53:47.669"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${id_value}</var>
+<arg>${id_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20231117 17:53:47.669" level="FAIL">IndexError: Given index 0 is out of the range 0--1.</msg>
+<status status="FAIL" starttime="20231117 17:53:47.669" endtime="20231117 17:53:47.669"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body1}</var>
+<arg>id=${id_value}</arg>
+<arg>first_name= ${updated_name}</arg>
+<arg>middle_name= Calamares</arg>
+<arg>last_name= Lumpia</arg>
+<arg>date_of_birth= 11/11/2011</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.669" endtime="20231117 17:53:47.669"/>
+</kw>
+<kw name="PUT On Session" library="RequestsLibrary">
+<var>${putresponse}</var>
+<arg>endtoend</arg>
+<arg>api/studentsDetails/${id_value}</arg>
+<arg>headers=${headers}</arg>
+<arg>data=${body1}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${putresponse.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${putresponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Fetch details and validate">
+<arg>${id_value}</arg>
+<doc>Fetch the details and validate the data</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="DELETE On Session" library="RequestsLibrary">
+<var>${deleteresponse}</var>
+<arg>endtoend</arg>
+<arg>api/studentsDetails/${id_value}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Convert String To Json" library="JSONLibrary">
+<var>${jsonresponse}</var>
+<arg>${deleteresponse.content}</arg>
+<doc>Convert String to JSON object</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${deleteresponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{success_msg}</var>
+<arg>${jsonresponse}</arg>
+<arg>msg</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>@{success_msg}</arg>
+<arg>success</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20231117 17:53:47.684" endtime="20231117 17:53:47.684"/>
+</kw>
+<doc>This test is for end to end scenario using the POST, PUT, DELETE, GET</doc>
+<status status="FAIL" starttime="20231117 17:53:44.604" endtime="20231117 17:53:47.684">IndexError: Given index 0 is out of the range 0--1.</status>
+</test>
+<status status="FAIL" starttime="20231117 17:53:44.187" endtime="20231117 17:53:47.684"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="EndtoEnd Scenarios">EndtoEnd Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../Resources/User_defined_01.robot
+Resource    ../../Resources/User_defined_Keywords.robot
 Force Tags    FRTags
 
 *** Test Cases ***
@@ -11,7 +11,8 @@ TC_01 Set & get Selenium Speed and Waits
     #sleep    10 seconds
     # will wait for 10 secs only after the previous statement .
     #Not for all the following commands
-    #value can be given as a number that is considered to be seconds . Waits before each selenium commands following this keyword
+    #value can be given as a number that is considered to be seconds .
+    #Waits before each selenium commands following this keyword
     input text    name:fld_username    vandtest
     input text    name:fld_email    test@gmail.com
     input text    name:fld_password    Test@123
@@ -24,6 +25,7 @@ TC_01 Set & get Selenium Speed and Waits
 
 
 TC_02 Explicit Waits_Default
+
     [Tags]    Waits
     Start_browser_and_maximize
     ${tm}=    get selenium timeout

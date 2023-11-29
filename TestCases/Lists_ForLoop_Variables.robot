@@ -1,4 +1,6 @@
 *** Settings ***
+Documentation     This suite has test cases for List and Loop implementation
+# suite level documentation, which is applicable for all the test cases in the test suite
 Library    SeleniumLibrary
 Library    Collections
 

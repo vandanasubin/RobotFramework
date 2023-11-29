@@ -1,7 +1,7 @@
 # Validations means assertions
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/User_defined_01.robot
+Resource    ../Resources/User_defined_Keywords.robot
 Documentation    This file contains test cases for validating the checkboxes
 Suite Setup    Before Each Test Suite
 Suite Teardown    After Each Test Suite
@@ -21,11 +21,11 @@ TC_001_ValidationTest
 
 
 TC_002_Checkbox_Validation
-    [Tags]    Checkboxes
-   [Documentation]    This testcase defines the checkbox checking and unchecking with user defined keywords
-     ...              Second line of documentation
 
-   [Timeout]    5 minutes  # If the testcase is not completed within the specified timeout value, then timeout error occurs
+    [Documentation]    This testcase defines the checkbox checking and unchecking with user defined keywords
+     ...              Second line of documentation
+    [Tags]    Checkboxes
+    [Timeout]    5 minutes  # If the testcase is not completed within the specified timeout value, then timeout error occurs
 
    ${title}=    initial browser setup withargs    chrome     https://www.thetestingworld.com/testings/
    log to console    ${title}

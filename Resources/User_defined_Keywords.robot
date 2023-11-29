@@ -8,7 +8,7 @@ Library    ../ExternalKeywords/DataDrivenMethods.py
 *** Variables ***
 ${Browser}    chrome
 ${url}    https://www.thetestingworld.com/testings/
-
+# The variables we placed in the resource files can be used across the test files .
 
 *** Keywords ***
 
